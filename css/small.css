@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Page body styling */
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Main, Header, Footer page styling */
+header,
+footer,
+main {
+    max-width: 100%;
+    /*16px * 36 = 576px*/
+    margin: 0 auto;
+    /* Center from left to right*/
+    padding: .5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: whitesmoke;
+    color: black;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0rem;
+}
+
+footer {
+    background-color: gainsboro;
+    color: black;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Header logo and nav styling */
+.logo-div {
+    text-align: center;
+}
+
+.nav-bar {
+    overflow: hidden;
+    background-color: #333;
+    align-items: center;
+}
+
+.nav-bar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.active {
+    background-color: lightskyblue;
+    color: black;
+}
+
+.nav-bar .icon {
+    display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.nav-bar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+
+    .nav-bar a:not(:first-child),
+    .dropdown .dropbtn {
+        display: none;
+    }
+
+    .nav-bar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar.responsive {
+        position: relative;
+    }
+
+    .nav-bar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav-bar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .nav-bar.responsive .dropdown {
+        float: none;
+    }
+
+    .nav-bar.responsive .dropdown-content {
+        position: relative;
+    }
+
+    .nav-bar.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Main styling for Home page */
+
+.home-grid{
+    width: 100%;
+    padding-top: .1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.mySlides{
+    display: none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides img{
+    width: 100%;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* Home page quicklinks styling */
+.quicklink-div{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.quicklink-div div{
+    margin: 0 auto;
+    width: 90%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: .2rem;
+    background-color: skyblue;
+    box-shadow: #333 10px 5px 10px;
+}
+
+.guide-div{
+    grid-column: 1/2;
+}
+
+.chats-div{
+    grid-column: 2/3;
+}
+
+.tickets-div{
+    width: 100%;
+    grid-column: 1/3;
+}

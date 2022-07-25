@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Form - Home</title>
+    <meta name="author" content="Joshua Dean">
+    <meta name="description" content="Automated IT Form Home Page.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Automated IT Form Template</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link href="css/small.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <!-- Header logo -->
+        <div class="logo-div">
+            <img src="images/IT-Service-Desk-logos_transparent.webp" alt="IT Service Desk Logo" width="200"
+                height="200">
+        </div>
+        <!-- Header Navigation Bar Responsive -->
+        <div class="nav-bar" id="my-nav-bar">
+            <a href="#home" class="active"><i class="fa-solid fa-house-chimney"></i> Home</a>
+            <a href="guide/"><i class="fa-solid fa-circle-question"></i></i> Guide</a>
+            <a href="chats/"><i class="fa-solid fa-comment-dots"></i></i> Chats</a>
+            <a href="tickets/"><i class="fa-solid fa-ticket"></i></i> Tickets</a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-list-check"></i></i>All forms
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="services/reception/">Previous chats</a>
+                    <a href="services/missionary/">Previous tickets</a>
+                    <a href="reference/">Reference Page</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navFunction()">&#9776;</a>
+        </div>
+    </header>
+    <main class="home-grid">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://picsum.photos/800/300?random=1" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://picsum.photos/800/300?random=2" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://picsum.photos/800/300?random=3" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="quicklink-div">
+            <div class="guide-div"></div>
+            <div class="chats-div"></div>
+            <div class="tickets-div"></div>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/slideshow.js"></script>
+</body>
+
+</html>
