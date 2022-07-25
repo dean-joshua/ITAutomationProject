@@ -275,3 +275,33 @@ footer {
     width: 100%;
     grid-column: 1/3;
 }
+
+/* Table styling */
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: .5rem;   
+}
+
+th,td{
+    border: 1px solid skyblue;
+    padding: .25rem .5rem;
+}
+
+thead tr:nth-child(1),
+thead tr:nth-child(2){
+    background-color: skyblue;
+    color: whitesmoke;
+}
+
+tr:nth-child(even){
+    background-color: aquamarine;
+}
+
+tr:nth-child(odd){
+    background-color: whitesmoke;
+}
+
+.table-center{
+    text-align: center;
+}
