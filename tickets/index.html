@@ -71,7 +71,7 @@
                     <th scope="col">Total</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="ticketTable">
 
             </tbody>
             <tfoot>
@@ -89,20 +89,45 @@
             <label for="ticektid">Ticket ID:</label>
             <input type="text" id="ticketid" name="ticketid"><br>
             <br>
-            <label for="vol">Created & Resolved (between 0 and 10):</label>
-            <input type="number" id="vol" name="vol" min="0" max="50">
+            <label for="created">Created & Resolved (between 0 and 10):</label>
+            <input type="number" id="created" name="created" min="0" max="10"><br>
+            <br>
+            <label for="form">Form(between 0 and 5):</label>
+            <input type="number" id="form" name="form" min="0" max="5"><br>
+            <br>
+            <label for="assigned">Assigned(between 0 and 5):</label>
+            <input type="number" id="assigned" name="assigned" min="0" max="5"><br>
+            <br>
+            <label for="desc">Description(between 0 and 30):</label>
+            <input type="number" id="desc" name="desc" min="0" max="30"><br>
+            <br>
+            <label for="security">Security (between 0 and 10):</label>
+            <input type="number" id="security" name="security" min="0" max="10"><br>
+            <br>
+            <label for="quality">High Quality (between 0 and 5):</label>
+            <input type="number" id="quality" name="quality" min="0" max="5"><br>
+            <br>
+            <label for="professional">Professional (between 0 and 5):</label>
+            <input type="number" id="professional" name="professional" min="0" max="5"><br>
+            <br>
+            <label for="kb">KB Attached (between 0 and 10):</label>
+            <input type="number" id="kb" name="kb" min="0" max="10"><br>
+            <br>
+            <label for="tech">Technical Process(between 0 and 20):</label>
+            <input type="number" id="tech" name="tech" min="0" max="20"><br>
         </div>
 
         <hr>
 
         <!-- Button for adding values as a row in the table -->
-        <button>Add Row</button>
+        <button onclick="createRow()">Add Row</button>
 
     </main>
     <footer>
 
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/tickets.js"></script>
 </body>
 
 </html>
